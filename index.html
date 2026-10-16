@@ -67,14 +67,11 @@
     .subhead p { margin: 0 0 10px; }
     .meta {
       margin-top: 34px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      text-align: center;
       font-size: 1.08rem;
       line-height: 1.4;
     }
     .meta p { margin: 0; }
-    .meta .right { text-align: right; }
 
     section { padding: 34px 0 8px; }
     .section-title {
@@ -202,12 +199,11 @@
     }
 
     @media (max-width: 760px) {
-      .meta, .bio-list { grid-template-columns: 1fr; }
+      .bio-list { grid-template-columns: 1fr; }
       .bio-card:nth-child(odd), .bio-card:nth-child(even) {
         padding-left: 0;
         padding-right: 0;
       }
-      .meta .right { text-align: left; }
       .wrap { width: min(100% - 30px, 980px); }
       .name { font-size: 1.7rem; }
       .role { font-size: 1.08rem; }
@@ -236,14 +232,7 @@
         <p>translated and adapted from Seneca’s <em>Oedipus</em></p>
       </div>
       <div class="meta">
-        <div>
-          <p>10.16.26</p>
-          <p>7:00 p.m.</p>
-        </div>
-        <div class="right">
-          <p>Leynse Studio</p>
-          <p>A.R.T. / NY Spaces@520</p>
-        </div>
+        <p>10.16.26 · 7:00 p.m.</p>
       </div>
     </div>
 
