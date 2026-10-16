@@ -99,12 +99,16 @@
     .bio-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0 52px;
+      gap: 0;
     }
     .bio-card {
       padding: 22px 0 24px;
       border-bottom: 1px solid var(--rule);
     }
+    /* Keep the two-column spacing inside each card so the
+       horizontal rules meet in the middle without a gap. */
+    .bio-card:nth-child(odd) { padding-right: 26px; }
+    .bio-card:nth-child(even) { padding-left: 26px; }
     .role {
       margin: 0 0 6px;
       font-size: 1.2rem;
@@ -192,6 +196,10 @@
 
     @media (max-width: 760px) {
       .meta, .bio-list { grid-template-columns: 1fr; }
+      .bio-card:nth-child(odd), .bio-card:nth-child(even) {
+        padding-left: 0;
+        padding-right: 0;
+      }
       .meta .right { text-align: left; }
       .wrap { width: min(100% - 30px, 980px); }
       .name { font-size: 1.7rem; }
@@ -295,7 +303,7 @@
           <p class="role">Producer, Stage Manager</p>
           <h3 class="name">Katie Kirk</h3>
           <!-- <img class="headshot" src="headshots/katie-kirk.jpg" alt="Portrait of Katie Kirk"> -->
-          <p class="bio">Katie Kirk is a playwright and producer. Writing credits include: Under Review (Ghost Light Collective, O'Neill semifinalist), The Thallium Murders (Alfred P. Sloan Foundation), ONE HUNDRED BEES (Concord Theatricals). Other: PSM for BENT (OUT/PLAY), 2nd AC for clients including Entertainment Weekly and Ellipsus. They really like hedgehogs. katiejkirk.com</p>
+          <p class="bio">Katie Kirk is a playwright and producer. Writing credits include Under Review (Ghost Light Collective, O'Neill semifinalist), The Thallium Murders (Alfred P. Sloan Foundation), ONE HUNDRED BEES (Concord Theatricals). Other: PSM for BENT (OUT/PLAY), 2nd AC for clients including Entertainment Weekly and Ellipsus. They really like hedgehogs. katiejkirk.com</p>
         </article>
       </div>
 
